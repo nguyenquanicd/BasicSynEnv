@@ -1,0 +1,17 @@
+Conver libray *.lib to *.db
+1. Start lc_shell (library compiler)
+> lc_shell
+2. read library 
+lc_shell > read_lib <lib_path>/lib_name.lib
+Ex: lc_shell > read_lib /home/vlsi/MyData/Synthesis/lib/NangateOpenCellLibrary_fast_ccs.lib
+
+3. write in to db lib
+lc_shell > write_lib -format db -output lib_name.db
+Ex: lc_shell > NangateOpenCellLibrary_fast_ccs.lib
+
+
+
+Synthesis:
+
+set up library and design path (search_path location of libs; target_libray point to the intended corners typ, slow, fast;) 
+command: : dc_shell -f dc_command.src
